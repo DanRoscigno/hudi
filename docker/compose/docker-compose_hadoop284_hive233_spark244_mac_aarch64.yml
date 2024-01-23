@@ -250,6 +250,15 @@ services:
     volumes:
       - ${HUDI_WS}:/var/hoodie/ws
 
+  starrocks:
+    image: starrocks/allin1-ubuntu:latest
+    hostname: starrocks-fe
+    container_name: allin1-ubuntu
+    ports:
+      - 8030:8030
+      - 8040:8040
+      - 9030:9030
+
 volumes:
   namenode:
   historyserver:
